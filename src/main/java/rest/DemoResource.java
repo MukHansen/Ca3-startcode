@@ -72,7 +72,7 @@ public class DemoResource {
     @GET
     @Path("fill")
     @Produces(MediaType.APPLICATION_JSON)
-    public SetupTestUsers getFilling() {
-        return new SetupTestUsers();
+    public void getFilling() {
+        new SetupTestUsers().fill();
     }
 }

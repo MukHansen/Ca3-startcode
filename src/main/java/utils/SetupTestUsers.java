@@ -9,8 +9,8 @@ import javax.persistence.EntityManagerFactory;
 
 public class SetupTestUsers {
 
-  public static void main(String[] args) {
-
+    public void fill(){
+    
     EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory(EMF_Creator.DbSelector.DEV, EMF_Creator.Strategy.CREATE);
     EntityManager em = emf.createEntityManager();
     
@@ -44,7 +44,5 @@ public class SetupTestUsers {
     System.out.println("Testing user with OK password: " + user.verifyPassword("test"));
     System.out.println("Testing user with wrong password: " + user.verifyPassword("test1"));
     System.out.println("Created TEST Users");
-   
-  }
-
+    }
 }
