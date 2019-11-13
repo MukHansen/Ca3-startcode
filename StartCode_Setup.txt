@@ -4,13 +4,18 @@
 	kontrollér pom.xml linie 18(remote.server).
 	Husk at kontrollér at der bruges https og ikke http.
 3.
-	sørg for at connection i EMF_Creator linie 121, 	"CONNECTION" er unik.
+	sørg for at connection i EMF_Creator linie 121, 		"CONNECTION" er unik.
 4.
 	ssh ind i dropletten, og brug
 	- sudo nano /opt/tomcat/bin/setenv.sh -
 	opret ny export med "CONNECTION" fra step 3.
 5.
-	på travis sæt REMOTE_USER til "script_user" og 		REMOTE_PW til dertilhørende password.
+	kontrollér database navne i config.properties.
+	(other sources -> config.properties)
+6.
+	ændre database navn i linie 40(CREATE DATABASE ??).
+7.
+	på travis sæt REMOTE_USER til "script_user" og 			REMOTE_PW til dertilhørende password.
 	
 	brug følgende kommando for at finde password til 		brugeren hvis nødvendigt.
 	sudo nano /opt/tomcat/conf/tomcat-users.xml
